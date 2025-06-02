@@ -1,0 +1,104 @@
+/* Estilo general del cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.contenedor-formulario {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fcf9d7;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* Barra de progreso */
+.barra-progreso {
+    height: 20px;
+    background-color: #fcf9d7;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progreso {
+    height: 100%;
+    background-color: #ffffff;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* Ocultar pasos por defecto */
+.paso {
+    display: none;
+}
+
+/* Paso activo visible */
+.paso.activo {
+    display: block;
+}
+
+/* Inputs y selects */
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #fcf9d7;
+}
+
+/* Opción seleccionada */
+select:focus,
+input:focus {
+    background-color: #ffffff;
+}
+
+/* Botones de navegación */
+.botones {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #fcf9d7;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Validación visual */
+.reglas {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.regla {
+    color: black;
+    font-size: 14px;
+}
+
+/* Reglas cumplidas ocultas */
+.regla.cumplida {
+    display: none;
+}
+
+/* Mensaje final */
+.mensaje-final {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

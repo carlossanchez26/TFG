@@ -1,0 +1,266 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+#contenedorCabecero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logoyTexto {
+    display: flex;
+    align-items: center;
+}
+
+#textoWordSplash h2 {
+    color: #4285f4;
+    font-size: 28px;
+    margin: 0;
+}
+
+#contenedorCentral {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#imagenPerros {
+    width: 45%;
+    background-color: #e0e0e0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#textoyBotones {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#textoCentral p {
+    font-size: 24px;
+    color: #333;
+    line-height: 1.5;
+}
+
+button {
+    padding: 12px 24px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#botonComienzaAhora {
+    background-color: #4285f4;
+    color: white;
+}
+
+#botonComienzaAhora:hover {
+    background-color: #3367d6;
+}
+
+#botonYaTengoCuenta {
+    background-color: transparent;
+    border: 2px solid #4285f4;
+    color: #4285f4;
+}
+
+#botonYaTengoCuenta:hover {
+    background-color: #f1f6ff;
+}
+
+#contenedorInferior {
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Selector de idioma */
+.selector-idioma {
+    position: relative;
+    display: inline-block;
+    font-family: sans-serif;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.texto-idioma {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.flecha {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.flecha.girada {
+    transform: rotate(180deg);
+}
+
+.hud-idiomas {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 200px;
+    flex-direction: column;
+}
+
+.hud-idiomas div {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    gap: 10px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.hud-idiomas div:hover {
+    background-color: #f0f0f0;
+}
+
+.hud-idiomas.activo {
+    display: flex;
+}
+
+.bandera {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+}
+
+/* Carrusel */
+.carrusel-container {
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    background-color: #f9f9f9;
+}
+
+.carrusel-container .flecha {
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 10px;
+    user-select: none;
+    transition: transform 0.2s;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    margin: 0 3px;
+    color: #4285f4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carrusel-container .flecha:hover {
+    transform: scale(1.2);
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: max-content;
+    overflow: hidden;
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px 5px;
+}
+
+/* Añade una clase diferente en HTML para distinguirlos si es necesario */
+.flecha-carrusel {
+    /* hereda de .flecha o repite aquí */
+    font-size: 2rem;
+}
+
+.flecha-selector {
+    font-size: 1.2rem;
+}
+
+
+.item-idioma {
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    margin: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.item-idioma img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+button:focus {
+    outline: 2px solid #3367d6;
+    outline-offset: 2px;
+}
+
+.hud-idiomas {
+    background-color: #ffffff;
+    /* #fcfcfc o #fefefe también es válido */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    #contenedorCentral {
+        flex-direction: column;
+    }
+
+    #imagenPerros,
+    #textoyBotones {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .carrusel-container {
+        width: 90%;
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,65 @@
+/* Colores base para modos */
+.modo.facil .modo-titulo {
+    color: #2e8b57;
+    /* verde */
+}
+
+.modo.medio .modo-titulo {
+    color: #ffa500;
+    /* naranja */
+}
+
+.modo.dificil .modo-titulo {
+    color: #dc143c;
+    /* rojo */
+}
+
+/* Niveles - estados */
+.nivel {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    user-select: none;
+}
+
+/* Estados */
+.nivel.completado {
+    background-color: #4CAF50;
+    /* verde */
+    cursor: pointer;
+}
+
+.nivel.desbloqueado {
+    background-color: #FFC107;
+    /* amarillo */
+    cursor: pointer;
+}
+
+.nivel.bloqueado {
+    background-color: #CCC;
+    /* gris */
+    cursor: not-allowed;
+    pointer-events: none;
+    /* deshabilitar clic */
+}
+
+
+/* Líneas entre niveles */
+.linea {
+    flex: 1;
+    height: 4px;
+    background-color: #ccc;
+    margin: 0 2px;
+    align-self: center;
+}
+
+/* Opcional: cambia color línea según progreso */
+.nivel.completado+.linea {
+    background-color: #2e8b57;
+}
